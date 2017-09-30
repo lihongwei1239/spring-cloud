@@ -8,11 +8,22 @@ spring:
       server:
         git:
           uri: https://github.com/lihongwei1239/spring-cloud     # 配置git仓库的地址
-          search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
-          username: lihongwei1239@outlook.com                    # git仓库的账号
-          password: li13658465405                                 # git仓库的密码
+          search-paths: config-repo                            # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: lihongwei1239@outlook.com                   # git仓库的账号
+          password: li13658465405                               # git仓库的密码
+  rabbitmq:
+    host: 192.168.1.210
+    port: 5672
+    username: hxb
+    password: hxb
+
 
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/   ## 注册中心eurka地址
+
+management:
+  security:
+    enabled: false
+
